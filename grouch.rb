@@ -1,7 +1,7 @@
 require './couch.rb'
 
+#Setup GrouchDB view on a CouchDB server
 module Grouch
-
 	class Server < Couch::Server
 		#Creates an instance of with basic CouchDB commands and .
 		def initialize host, port, options = nil

@@ -1,8 +1,9 @@
 require 'net/http'
 require 'json'
 
-module Couch
 
+#Basic CouchDB server commands
+module Couch
   class Server
     def initialize(host, port, options = nil)
       @host = host
