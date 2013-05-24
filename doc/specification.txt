@@ -1,0 +1,89 @@
+Assumptions
+===========
+
+Each server has 0 or 1 connected components, if we do not consider the edges that crosses over to nodes on other servers.
+
+
+#
+# Data Structures
+#
+
+node
+{
+	"id": <int>,
+	"children": [<node.id>],
+	"part_of": <node.id>,
+
+	"root":
+
+	"super_node": 
+
+	"dfs":
+	{
+		"index": <int>,
+		"forward_edges": [<node.id>],
+		"back_edges": [<node.id>],
+	},
+
+
+
+	"data": <doc>
+}
+
+edge
+{	
+	from
+	"data": <doc>
+}
+
+
+#
+# Algorithms
+# 
+
+
+# Importing 
+
+
+# Bridge Algorithm
+
+function DFS(root)
+	from_node = root 
+	queue = [{root.id: root.children}]
+	i = 0
+	root.dfs.index = i
+
+
+	while queue not empty
+
+		to_node = queue.last.pop
+
+		if to_node.dfs.index empty
+
+		queue += node.children
+
+		if queue.last empty
+			queue.pop
+
+
+servers.each do
+	DFS(random node)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

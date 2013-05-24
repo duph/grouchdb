@@ -1,0 +1,96 @@
+Graph Node
+
+node
+{
+	id: <int>
+	edges: { node.id: <doc> }
+	data: <doc>
+}
+
+Graph node structure
+
+node
+{
+	id: <int>
+	edges: { node.id: <doc> }
+
+	data: <doc>
+
+	bridge_alg: {
+		0:
+		{
+			root: nil or
+			{
+				cycle_nodes: []
+			}
+
+			cycle: nil or
+			{
+				edges: { cycle.id: [ node_from.id, node_to.id ] }
+			}
+
+			visited?: nil or <int>
+			part_of_cycle: nil or cycle_node.id
+
+			back_edges: []
+			forward_edges: []
+		}
+
+		1:
+		{
+
+		}
+	 } 
+}
+
+Initialized node state for bridge algorithm
+
+node
+{
+	id: <int>
+	edges { node.id: <doc> }
+
+	data: <doc>
+
+	bridge_alg: 
+	{
+		0:
+		{
+			root: nil
+			cycle: nil
+
+			visited?: nil
+			part_of_cycle: nil
+
+			back_edges: []
+			forward_edges: []
+		}
+	}
+}
+
+
+Bridge algorithm node types, and information they contain 
+
+
+root_node
+
+cycle_nodes: [ cycle_node.id, .. ]
+
+-
+
+cycle_node
+
+id: -> node.id
+#id points to the id of the node that hosts the cycle node
+
+edges: { cycle_node.id: { original_graph_from: node.id, original_graph_to: node.id }, ..  }
+
+-
+
+regular_node
+
+visited?
+
+back_edges: [ node.id, .. ]
+
+forward_edges: [ node.id, .. ]
