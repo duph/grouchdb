@@ -32,7 +32,7 @@
                 "sanjuta": 4,
                 "fredrik": 3,
                 "aya": 4
-            }1
+            }
         },
         {
             "_id": "aya",
@@ -46,11 +46,7 @@
         {
             "_id": "Eric",
             "edges": {
-                "ab": 2,
-                "cd": 4,
-                "ef": 3,
 		"aya" :4,
-                "gh" : 4
             }
         }
     ]
