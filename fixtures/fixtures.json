@@ -18,6 +18,15 @@
             }
         },
         {
+            "_id": "fredrick",
+            "edges": {
+                "david": "3",
+                "felicity": "1",
+                "sanjuta": "4",
+                "princy": "2"
+            }
+        },        
+	{
             "_id": "princy",
             "edges": {
                 "sanjuta": "4",
