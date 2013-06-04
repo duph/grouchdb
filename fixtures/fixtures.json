@@ -3,53 +3,54 @@
         {
             "_id": "david",
             "edges": {
-                "sanjuta": "3",
-                "fredrik": "2",
-                "blythe": "4"
+                "sanjuta": 3,
+                "fredrik": 2,
+                "blythe": 4
             }
         },
         {
             "_id": "sanjuta",
             "edges": {
-                "david": "3",
-                "fredrik": "1",
-                "princy": "4",
-                "james": "2"
+                "david": 3,
+                "fredrik": 1,
+                "princy": 4,
+                "james":2
             }
         },
         {
             "_id": "fredrick",
             "edges": {
-                "david": "3",
-                "felicity": "1",
-                "sanjuta": "4",
-                "princy": "2"
+                "david": 3,
+                "felicity": 1,
+                "sanjuta": 4,
+                "princy": 2
             }
         },        
 	{
             "_id": "princy",
             "edges": {
-                "sanjuta": "4",
-                "fredrik": "3",
-                "aya": "4"
-            }
+                "sanjuta": 4,
+                "fredrik": 3,
+                "aya": 4
+            }1
         },
         {
             "_id": "aya",
             "edges": {
-                "james": "2",
-                "princy": "4",
-                "misty": "3",
-                "eric" : "4"
+                "james": 2,
+                "princy": 4,
+                "misty": 3,
+                "eric" : 4
             }
         },
         {
             "_id": "Eric",
             "edges": {
-                "ab": "2",
-                "cd": "4",
-                "ef": "3",
-                "gh" : "4"
+                "ab": 2,
+                "cd": 4,
+                "ef": 3,
+		"aya" :4,
+                "gh" : 4
             }
         }
     ]
