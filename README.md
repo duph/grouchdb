@@ -1,14 +1,8 @@
 GrouchDB
 ========
 
-The graph data structure mapped to CouchDB
+The graph data structure mapped to cradle -> nodejs -> couchdb.
 
-Usage:
-Run couchdb on localhost:5984
-Create database db_name
->> ruby grouchdb.rb database_name
-
-Development
-===========
-
-(project structure)
+cradle - https://github.com/cloudhead/cradle
+nodejs - http://nodejs.org/
+couchdb - http://couchdb.apache.org/
