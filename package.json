@@ -4,7 +4,7 @@
     "description": "graph structure for cradle",
     "preferGlobal": "true",
     "main": "index.js",
-    "bin": { "grouchdb": "index.js" },
+    "bin": { "grouchdb": "grouchdb.js" },
     "author": "FPF",
     "keywords": ["grouch", "db", "graph", "cradle"],
     "repository" : {
