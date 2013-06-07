@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "description": "graph structure for cradle",
     "preferGlobal": "true",
-    "main": "index.js",
+    "main": "./lib/grouchdb",
     "bin": { "grouchdb": "grouchdb.js" },
     "author": "FPF",
     "keywords": ["grouch", "db", "graph", "cradle"],
