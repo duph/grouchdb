@@ -16,6 +16,8 @@ var start = function(){
 
 console.log("Welcome.");
 
+grouch.Connection(function(){});
+
 //node repl with custom prompt
 var grouchRepl = repl.start("Grouch> ");
 
