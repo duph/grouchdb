@@ -57,8 +57,8 @@ var delete_edge = function(from_key, to_key, callback){
 };
 
 
-var transitive_create = function(key){
-    transitive.create(key);
+var transitive_closure = function(){
+    transitive.closure();
     return 'called Transitive';
 };
 
@@ -84,6 +84,6 @@ grouchRepl.context.create_node = create_node;
 grouchRepl.context.add_edge = add_edge;
 grouchRepl.context.delete_edge;
 
-grouchRepl.context.transitive_create = transitive_create;
+grouchRepl.context.transitive_closure = transitive_closure;
 
 grouchRepl.context.friends_of_friend = friends_of_friend;
