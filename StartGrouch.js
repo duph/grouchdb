@@ -48,12 +48,12 @@ var create_node = function(from_key, to_key, value, callback){
 var add_edge = function(from_key, to_key, value, callback){
     basic.add_edge(from_key, to_key, value, callback);
     return 'called add_edge';
-}
+};
 
 var delete_edge = function(from_key, to_key, callback){
     basic.delete_edge(from_key, to_key, callback);
     return 'called delete_edge';
-}
+};
 
 console.log("Welcome.");
 
