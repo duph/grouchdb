@@ -57,6 +57,8 @@ var delete_edge = function(from_key, to_key, callback){
 
 console.log("Welcome.");
 
+grouch.Connection(function(){});
+
 //node repl with custom prompt
 var grouchRepl = repl.start("Grouch> ");
 
