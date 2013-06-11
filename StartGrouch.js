@@ -3,19 +3,20 @@ var repl = require("repl");
 var grouch = require('./lib/grouchdb.js');
 //var basic = require('./lib/grouchdb/basic.js');
 var basic = require('./lib/grouchdb/basic').Basic;
+var transitive = require('./lib/grouchdb/transitive').Transitive;
+var friends = require('./lib/grouchdb/friends').Friends;
 
 //declare custom commands to call Grouch functions
 //it calls functions in included files
 
 //var start = grouch.Connection;
-var start = function(){
-    grouch.Connection();
-    return 'starting...';
-};
+//var start = function(){
+//    grouch.Connection();
+//    return 'starting...';
+//};
 
 var get = function(key, callback){
     //basic.get(key, callback);
-    //basic.get(key, function(err, doc) { console.log(doc) });
     basic.get(key, function(err, doc) { console.log(doc) });
     return 'called get';
 };
@@ -55,6 +56,17 @@ var delete_edge = function(from_key, to_key, callback){
     return 'called delete_edge';
 };
 
+
+var transitive_create = function(key){
+    transitive.create(key);
+    return 'called Transitive';
+};
+
+var friends_of_friend = function(key){
+    friends.of_friend(key);
+    return 'called Friends of a Friend';
+}
+
 console.log("Welcome.");
 
 grouch.Connection(function(){});
@@ -62,7 +74,7 @@ grouch.Connection(function(){});
 //node repl with custom prompt
 var grouchRepl = repl.start("Grouch> ");
 
-grouchRepl.context.start = start;
+//grouchRepl.context.start = start;
 grouchRepl.context.get = get;
 grouchRepl.context.get_edges = get_edges;
 grouchRepl.context.merge = merge;
@@ -71,3 +83,7 @@ grouchRepl.context.create = create;
 grouchRepl.context.create_node = create_node;
 grouchRepl.context.add_edge = add_edge;
 grouchRepl.context.delete_edge;
+
+grouchRepl.context.transitive_create = transitive_create;
+
+grouchRepl.context.friends_of_friend = friends_of_friend;
