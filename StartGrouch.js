@@ -5,6 +5,7 @@ var grouch = require('./lib/grouchdb.js');
 var basic = require('./lib/grouchdb/basic').Basic;
 var transitive = require('./lib/grouchdb/transitive').Transitive;
 var friends = require('./lib/grouchdb/friends').Friends;
+var bridge = require('./lib/grouchdb/bridge').Bridge;
 
 //declare custom commands to call Grouch functions
 //it calls functions in included files
@@ -65,7 +66,12 @@ var transitive_closure = function(){
 var friends_of_friend = function(key){
     friends.of_friend(key);
     return 'called Friends of a Friend';
-}
+};
+
+var bridge_of = function(key, callback){
+	bridge.get(key, callback);
+    return 'called Bridge';
+};
 
 console.log("Welcome.");
 
@@ -87,3 +93,5 @@ grouchRepl.context.delete_edge;
 grouchRepl.context.transitive_closure = transitive_closure;
 
 grouchRepl.context.friends_of_friend = friends_of_friend;
+
+grouchRepl.context.bridge = bridge_of;
