@@ -68,8 +68,8 @@ var friends_of_friend = function(key){
     return 'called Friends of a Friend';
 };
 
-var bridge_of = function(key, callback){
-	bridge.get(key, callback);
+var bridge_of = function(key){
+	bridge.get(key, function(err, doc){ console.log(doc); });
     return 'called Bridge';
 };
 
