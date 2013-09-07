@@ -12,8 +12,10 @@ WARNING! This project is not buggy and not ready for use. It also has not been s
 It should be noted that the methods used to solve graph algorithms are unnecessary clunky and not parallelizable.
 
 Currently seemingly working:
-Basic graph operations
-Transitive closure
+Basic graph operations,
+Transitive closure,
+Friends of friends
+
 
 Currently not working:
 Bridge detection
